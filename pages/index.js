@@ -1,12 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import backgrImg from '../istockphoto-1406113665-612x612.jpg'
+import moongo from "../mongolian.jpeg"
+import arts from "../mognolianArts.jpg"
+import culture from "../culture.jpeg"
 
 export default function Home() {
   return (
     <div className="bg-white">
       <section className="relative h-[600px]">
         <Image
-          src="/placeholder.svg"
+          src={backgrImg}
           alt="Mongolian cultural celebration"
           fill
           className="object-cover"
@@ -33,7 +37,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/placeholder.svg" 
+                  src={moongo}
                   alt="Learn Mongolian" 
                   fill
                   className="object-cover"
@@ -53,7 +57,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/placeholder.svg" 
+                  src={culture}
                   alt="Cultural Events" 
                   fill
                   className="object-cover"
@@ -73,7 +77,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/placeholder.svg" 
+                  src={arts} 
                   alt="Art & Crafts" 
                   fill
                   className="object-cover"

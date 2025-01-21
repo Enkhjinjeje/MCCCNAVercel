@@ -1,9 +1,19 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import { useState, useRef } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { ShoppingCart, Menu, X } from "lucide-react"
+import { CSSTransition } from "react-transition-group"
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const nodeRef = useRef(null)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
@@ -18,36 +28,24 @@ export default function Header() {
             />
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/language-school" 
+            <Link
+              href="/library"
               className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
             >
-              LANGUAGE SCHOOL
+              ABC LIBRARY
             </Link>
-            <Link 
-              href="/events" 
-              className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
-            >
-              EVENTS & PROGRAMS
+            <Link href="/events" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
+              EVENTS
             </Link>
-            <Link 
-              href="/visit" 
-              className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
-            >
-              VISIT
+            <Link href="/programs" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
+              PROGRAMS
             </Link>
-            <Link 
-              href="/get-involved" 
-              className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
-            >
+            <Link href="/get-involved" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
               GET INVOLVED
             </Link>
-            <Link 
-              href="/shop" 
-              className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
-            >
+            <Link href="/shop" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
               MONGOLIAN SHOP
             </Link>
           </nav>
@@ -56,18 +54,77 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Link
               href="/donate"
-              className="bg-brand-red hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-sm tracking-wider"
+              className="bg-brand-red hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-sm tracking-wider hidden sm:inline-block"
             >
               DONATE
             </Link>
             <Link href="/cart" className="text-gray-900 hover:text-brand-blue relative">
+              <ShoppingCart className="h-6 w-6" />
               <span className="absolute -top-1 -right-1 bg-brand-red text-white rounded-full h-4 w-4 flex items-center justify-center text-xs font-bold">
                 0
               </span>
             </Link>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden text-gray-900 hover:text-brand-blue"
+              onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isMenuOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      <CSSTransition in={isMenuOpen} timeout={300} classNames="mobile-menu" unmountOnExit nodeRef={nodeRef}>
+        <div className="md:hidden" id="mobile-menu" ref={nodeRef}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link
+              href="/library"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              ABC LIBRARY
+            </Link>
+            <Link
+              href="/events"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              EVENTS
+            </Link>
+            <Link
+              href="/programs"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              PROGRAMS
+            </Link>
+            <Link
+              href="/get-involved"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              GET INVOLVED
+            </Link>
+            <Link
+              href="/shop"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              MONGOLIAN SHOP
+            </Link>
+            <Link
+              href="/donate"
+              className="block px-3 py-2 rounded-md text-base font-medium bg-brand-red hover:bg-red-600 text-white"
+            >
+              DONATE
+            </Link>
+          </div>
+        </div>
+      </CSSTransition>
     </header>
   )
 }
