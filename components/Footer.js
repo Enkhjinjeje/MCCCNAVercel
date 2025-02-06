@@ -28,10 +28,10 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-brand-yellow">Visit Us</h3>
             <address className="text-gray-400 not-italic">
-              <p>1414 South Weller Street</p>
-              <p>Seattle, WA 98144</p>
-              <p className="mt-2">Phone: (206) 568-7114</p>
-              <p>Email: admin@mcccw.org</p>
+              <p>9634 Thoorsk St.</p>
+              <p>Bothell, WA 98011</p>
+              <p className="mt-2">Phone: (206) 209 9437</p>
+              <p>Email: waculturalcenter@gmail.com</p>
             </address>
           </div>
           <div>

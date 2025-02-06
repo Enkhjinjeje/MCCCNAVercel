@@ -42,28 +42,10 @@ export default function Header() {
             <Link href="/programs" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
               PROGRAMS
             </Link>
-            <Link href="/get-involved" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
-              GET INVOLVED
-            </Link>
-            <Link href="/shop" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
-              MONGOLIAN SHOP
-            </Link>
           </nav>
 
           {/* Right section */}
           <div className="flex items-center space-x-4">
-            <Link
-              href="/donate"
-              className="bg-brand-red hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-sm tracking-wider hidden sm:inline-block"
-            >
-              DONATE
-            </Link>
-            <Link href="/cart" className="text-gray-900 hover:text-brand-blue relative">
-              <ShoppingCart className="h-6 w-6" />
-              <span className="absolute -top-1 -right-1 bg-brand-red text-white rounded-full h-4 w-4 flex items-center justify-center text-xs font-bold">
-                0
-              </span>
-            </Link>
             {/* Mobile menu button */}
             <button
               className="md:hidden text-gray-900 hover:text-brand-blue"
@@ -103,24 +85,6 @@ export default function Header() {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
             >
               PROGRAMS
-            </Link>
-            <Link
-              href="/get-involved"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
-            >
-              GET INVOLVED
-            </Link>
-            <Link
-              href="/shop"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
-            >
-              MONGOLIAN SHOP
-            </Link>
-            <Link
-              href="/donate"
-              className="block px-3 py-2 rounded-md text-base font-medium bg-brand-red hover:bg-red-600 text-white"
-            >
-              DONATE
             </Link>
           </div>
         </div>

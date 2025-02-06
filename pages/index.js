@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import backgrImg from '../istockphoto-1406113665-612x612.jpg'
+import backgrImg from '../bg2.jpg'
 import moongo from "../mongolian.jpeg"
 import arts from "../mognolianArts.jpg"
 import culture from "../culture.jpeg"

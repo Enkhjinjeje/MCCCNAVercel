@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import bgImg from "../../02.jpg"
 import { Calendar, Clock, MapPin } from 'lucide-react'
 
 export default function Events() {
@@ -8,7 +9,7 @@ export default function Events() {
       {/* Hero Section */}
       <section className="relative h-[400px]">
         <Image
-          src="/placeholder.svg"
+          src={bgImg}
           alt="Mongolian cultural events"
           fill
           className="object-cover"
