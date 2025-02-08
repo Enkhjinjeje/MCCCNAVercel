@@ -24,6 +24,25 @@ const eventDetails = {
     capacity: "Expected attendance: 5,000+",
     tags: ["Cultural Festival", "Traditional Sports", "Music", "Dance", "Food"]
   },
+  'music-workshop-2024': {
+    title: "Naadam Festival 2024",
+    date: "July 11-13, 2024",
+    time: "10:00 AM - 6:00 PM",
+    location: "Seattle Center",
+    image: "/placeholder.svg",
+    description: "Experience the excitement of Mongolia's largest cultural festival featuring traditional sports, music, and dance performances. The Naadam Festival, known as 'The Three Games of Men', celebrates Mongolian culture through competitions in wrestling, horse racing, and archery.",
+    activities: [
+      "Traditional Mongolian Wrestling Tournament",
+      "Horse Racing Exhibition",
+      "Archery Demonstrations and Competitions",
+      "Traditional Music and Dance Performances",
+      "Mongolian Cuisine Food Stalls",
+      "Cultural Workshops and Exhibitions"
+    ],
+    ticketInfo: "Tickets: $20 for adults, $10 for children (6-12), Free for children under 6",
+    capacity: "Expected attendance: 5,000+",
+    tags: ["Cultural Festival", "Traditional Sports", "Music", "Dance", "Food"]
+  },
 }
 
 export default function EventDetail() {

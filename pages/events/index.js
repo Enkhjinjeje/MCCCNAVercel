@@ -17,8 +17,8 @@ export default function Events() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
-            <h1 className="text-5xl font-bold mb-6">Cultural Events & Programs</h1>
-            <p className="text-xl">Join us in celebrating Mongolian culture through our diverse events and programs</p>
+            <h1 className="text-5xl font-bold mb-6">Cultural Events</h1>
+            <p className="text-xl">Join us in celebrating Mongolian culture through our diverse events</p>
           </div>
         </div>
       </section>
@@ -80,16 +80,12 @@ export default function Events() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Lunar New Year Celebration</h3>
-                  <p className="text-gray-600 mb-4">Welcome the Year of the Dragon with traditional ceremonies, performances, and festive activities.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Washington state Mongolian Parents’ Community Activities (2021-2023)</h3>
+                  <p className="text-gray-600 mb-4">Mongolian parents with children studying in Washington state schools have actively worked together as a team, making 2021, 2022, and 2023 productive and successful years.</p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="h-5 w-5 mr-2 text-brand-blue" />
-                      <span>February 10, 2024</span>
-                    </div>
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="h-5 w-5 mr-2 text-brand-blue" />
-                      <span>11:00 AM - 4:00 PM</span>
+                      <span>2021 - 2023</span>
                     </div>
                   </div>
                   <Link 

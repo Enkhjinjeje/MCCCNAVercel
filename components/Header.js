@@ -42,6 +42,9 @@ export default function Header() {
             <Link href="/programs" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
               PROGRAMS
             </Link>
+            <Link href="/reviews" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
+              REVIEWS
+            </Link>
           </nav>
 
           {/* Right section */}
@@ -85,6 +88,12 @@ export default function Header() {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
             >
               PROGRAMS
+            </Link>
+            <Link
+              href="/reviews"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              REVIEWS
             </Link>
           </div>
         </div>
