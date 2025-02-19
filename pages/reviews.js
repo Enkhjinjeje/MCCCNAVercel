@@ -6,15 +6,30 @@ import { Star, User } from "lucide-react"
 
 // Dummy data for initial reviews
 const initialReviews = [
-  { id: 1, name: "John Doe", rating: 5, comment: "Incredible experience! Learned so much about Mongolian culture." },
-  { id: 2, name: "Jane Smith", rating: 4, comment: "Great events and friendly staff. Highly recommended!" },
-  {
-    id: 3,
-    name: "Mike Johnson",
-    rating: 5,
-    comment: "The language classes are excellent. Can't wait to visit Mongolia!",
-  },
+  { "id": 1, "name": "Tuul", "rating": 5, "comment": "Thank you so much, @Oyuna Oyu, for organizing such a valuable and heartfelt event. Wishing you success in all your endeavors!" },
+  { "id": 2, "name": "Oyu T", "rating": 5, "comment": "I received very useful information at the right time. Big thank you!" },
+  { "id": 3, "name": "Baigali", "rating": 5, "comment": "Thank you very much. It was a truly insightful training session filled with valuable information, heartfelt advice, and encouragement that gave us great confidence." },
+  { "id": 4, "name": "Batzul", "rating": 5, "comment": "Thank you so much for organizing this wonderful meeting with so much dedication to our children's future. We were also treated to delicious buuz, salad, aaruul, urum, and boortsog. Best wishes! @Oyuna Oyu @Bolortuya Betty Nasanjargal" },
+  { "id": 5, "name": "Enkhtamir", "rating": 5, "comment": "Thank you, @Oyuna Oyu, for providing the opportunity to hear about our children's progress. Today's session was incredibly informative and filled with genuine care for our kids. Thank you again, @Bolortuya Betty Nasanjargal." },
+  { "id": 6, "name": "Munguu", "rating": 5, "comment": "This was such a wonderful and necessary meeting. My daughter felt highly motivated even before her one-on-one session. It was an incredibly inspiring gathering. Thank you!" },
+  { "id": 7, "name": "Batnasan", "rating": 5, "comment": "Thank you so much, @Bolortuya Betty Nasanjargal, for the invaluable information, and @Oyuna Oyu for organizing it so well. I sincerely hope you will hold this event again next year." },
+  { "id": 8, "name": "Puje", "rating": 5, "comment": "A huge thank you to @Bolortuya Betty Nasanjargal for providing invaluable advice with such sincerity. Also, thank you @Oyuna Oyu for dedicating your time and efforts to Mongolian children in Washington. This meeting was an A+ event!" },
+  { "id": 9, "name": "Nomin", "rating": 5, "comment": "Thank you so much, @Oyuna Oyu and @Bolortuya Betty Nasanjargal! My daughter was truly inspired by this session." },
+  { "id": 10, "name": "Suvdaa", "rating": 5, "comment": "Good evening. I would like to express my deepest gratitude to @Oyuna Oyu for organizing this event and to @Bolortuya Betty Nasanjargal for offering free, valuable guidance to our children with such sincerity. Looking forward to meeting again in the future. Safe travels!" },
+  { "id": 11, "name": "Delkhi", "rating": 5, "comment": "Thank you to all the wonderful people who selflessly shared their knowledge, guidance, and support for the well-being of our children. Special thanks to @Bolortuya Betty for traveling all this way to be with us, @Oyuna Oyu for organizing everything so well, and everyone who contributed to making this event possible." },
+  { "id": 12, "name": "Handaa", "rating": 5, "comment": "I deeply appreciate @Oyuna Oyu for organizing this meeting and @Bolortuya Betty Nasanjargal for generously sharing her invaluable advice for our Mongolian children. Wishing you both continued success in all your work!" },
+  { "id": 13, "name": "Tseegii", "rating": 5, "comment": "Thank you so much, @Bolortuya Betty Nasanjargal and @Oyuna Oyu!" },
+  { "id": 14, "name": "Undraa", "rating": 5, "comment": "This was such an important and beneficial meeting. Thank you!" },
+  { "id": 15, "name": "Damba", "rating": 5, "comment": "Thank you, @Oyuna Oyu! As the saying goes, 'Together, we are an ocean of strength.' Let's continue supporting our children!" },
+  { "id": 16, "name": "Saikhna", "rating": 5, "comment": "Thank you, @Bolortuya Betty Nasanjargal, for sharing your valuable experience and knowledge with Mongolian children, and @Oyuna Oyu for organizing this meaningful event so beautifully!" },
+  { "id": 17, "name": "Ariunjargal", "rating": 5, "comment": "@Oyuna Oyu, thank you so much for the excellent organization, and @Enkhjin, thank you as well. @Bolortuya Betty Nasanjargal, your openness and willingness to help were truly remarkable. Wishing you great success in all your work!" },
+  { "id": 18, "name": "Jargalmaa", "rating": 5, "comment": "Thank you for everything, @Oyuna Oyu!" },
+  { "id": 19, "name": "Zaya", "rating": 5, "comment": "Thank you, @Oyuna Oyu, and everyone else who helped and participated!" },
+  { "id": 20, "name": "Soko", "rating": 5, "comment": "Heartfelt thanks to @Oyuna Oyu and all those who dedicated their time and energy to organizing this event. Also, a big thank you to @Bolortuya Betty Nasanjargal for selflessly sharing her expertise and advice to help our Mongolian children." },
+  { "id": 21, "name": "Oyu T", "rating": 5, "comment": "@Bolortuya Betty Nasanjargal, your sincerity was truly felt throughout the training. I have no doubt that many Mongolian children will achieve success by following your guidance. Hard work is important, but when done with sincerity, it becomes something truly special." },
+  { "id": 22, "name": "Bolortuya", "rating": 5, "comment": "Good morning, Seattle moms! I have safely arrived back home. Thank you for inviting me and making me feel so welcome. Although I am back, I still cannot forget the warm and wonderful two days spent in Seattle." }
 ]
+
 
 export default function Reviews() {
   const [reviews, setReviews] = useState(initialReviews)
