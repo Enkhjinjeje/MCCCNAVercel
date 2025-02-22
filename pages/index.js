@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import backgrImg from '../bg2.jpg'
-import moongo from "../mongolian.jpeg"
-import arts from "../mognolianArts.jpg"
-import culture from "../culture.jpeg"
+import backgrImg from '../photos/backgrounds/bg2.jpg'
+import moongo from "../photos/stock/mongolian.jpeg"
+import arts from "../photos/stock/mognolianArts.jpg"
+import culture from "../photos/stock/culture.jpeg"
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
             <h1 className="text-5xl font-bold mb-6">Mongolian Cultural Center in North America</h1>
             <p className="text-xl mb-8">Preserving and sharing the rich cultural heritage of Mongolia with communities across North America</p>
             <Link 
-              href="/about" 
+              href="/events" 
               className="bg-brand-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-md text-lg inline-block"
             >
               Discover Our Center
@@ -84,8 +84,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-brand-blue">Art & Crafts</h3>
-                <p className="text-gray-600 mb-4">Explore traditional Mongolian arts, crafts, and cultural workshops</p>
+                <h3 className="text-xl font-bold mb-3 text-brand-blue">Programs and Initiatives</h3>
+                <p className="text-gray-600 mb-4">Learn about mongolian future and prospects from their projects</p>
                 <Link 
                   href="/programs"
                   className="text-brand-red hover:text-red-600 font-semibold"
