@@ -2,12 +2,12 @@ import { useState } from "react"
 import Image from "next/image"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import background from "../photos/backgrounds/04.jpg"
-import first from "../photos/programs/5.jpg"
-import ankhaa from "../photos/programs/Ankhaa.jpg"
-import binderiya from "../photos/programs/Binderiya_Khaliun.jpg"
-import NomTelmen from "../photos/programs/Nom-telmen.jpg"
-import Telmen from "../photos/programs/Telmen.jpg"
-import tumurhuu from "../photos/programs/Tumurkhuu.jpg"
+import first from "../photos/programImages/mit.jpg"
+import ankhaa from "../photos/programImages/ankhaa.jpg"
+import binderiya from "../photos/programImages/binderiyaKhaliun.jpg"
+import NomTelmen from "../photos/programImages/nomtelmen.jpg"
+import Telmen from "../photos/programImages/telmen.jpg"
+import tumurhuu from "../photos/programImages/tumurkhuu.jpg"
 
 const projects = [
   {
