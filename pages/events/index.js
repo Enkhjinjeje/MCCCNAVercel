@@ -75,7 +75,7 @@ const eventsByYear = {
       image: s20245,
       date: "June 1, 2024",
       description:
-        "As part of our annual Children's Day tradition, we are launching a new initiative to celebrate and honor high school graduates turning 18 and newborns by giving them special gifts each year.\n\nIn 2024, we sent congratulatory messages to approximately 55 high school graduates.\n• Los Angeles and Denver graduates received greetings, books, and notebooks from fellow graduates.\n• Washington State graduates were presented with greetings, flowers, and gift cards to mark this milestone.\n\nTo each of our young Mongolians, we encourage you to cherish and promote the Mongolian language and culture, and always take pride in your Mongolian heritage! 🎉🎓💙",
+        "As part of our annual Children's Day tradition, we are launching a new initiative to celebrate and honor high school graduates turning 18 and newborns by giving them special gifts each year. In 2024, we sent congratulatory messages to approximately 55 high school graduates. Los Angeles and Denver graduates received greetings, books, and notebooks from fellow graduates. Washington State graduates were presented with greetings, flowers, and gift cards to mark this milestone.To each of our young Mongolians, we encourage you to cherish and promote the Mongolian language and culture, and always take pride in your Mongolian heritage! 🎉🎓💙",
     },
     {
       id: 7,
@@ -83,9 +83,9 @@ const eventsByYear = {
       date: "June 8-9, 2024",
       image: s20246,
       description:
-        "We invited Bolortuya Nasanjargal to conduct a two-day workshop on 'College Preparation Strategies, Tactics, and Scholarship Opportunities.' This workshop provided a broad yet in-depth understanding of key topics, including:\n• How to increase college admission chances\n• Importance of GPA\n• SAT/ACT exams\n• Volunteer work & extracurricular activities\n• College essays\n• FAFSA application strategies\n• CSS Profile preparation\n• Scholarship opportunities\n• Key takeaways: success factors, lessons learned, and critical considerations",
+        "We invited Bolortuya Nasanjargal to conduct a two-day workshop on 'College Preparation Strategies, Tactics, and Scholarship Opportunities.' This workshop provided a broad yet in-depth understanding of key topics, including:\n How to increase college admission chances. Importance of GPA SAT/ACT exams Volunteer work & extracurricular activities College essays FAFSA application strategies CSS Profile preparation Scholarship opportunities Key takeaways: success factors, lessons learned, and critical considerations",
       details:
-        "Workshop Impact:\n• 45 parents attended, including those with college students and even parents of 3rd graders, recognizing the importance of early preparation.\n• 33 students (from 8th grade to college juniors) participated in the 8 AM - 12 PM session alongside their parents.\n• 30 private consultation slots were arranged, with 40 students receiving personalized guidance tailored to their goals and aspirations.\n• This workshop engaged 143-150 participants in total, making it one of the largest events we have successfully organized together!\n\nSpecial Contribution:\n• T. Narantuya, Senior Tax Manager at Amazon, led a Resume Clinic, mentoring students on resume writing and optimizing LinkedIn profiles.\n\nMany students shared their heartfelt gratitude, saying:\n'They have a really good counselor-she is changing the whole trajectory of their life. I see kids are all very happy!'\n\nThis event created a supportive, uplifting community where students, parents, and professionals came together to share knowledge, celebrate each other's success, and inspire the next generation. Seeing this culture of encouragement and generosity grow was truly rewarding.\n\nWe did it! Thank you to all the parents and students who made this possible!",
+        "Workshop Impact: 45 parents attended, including those with college students and even parents of 3rd graders, recognizing the importance of early preparation. 33 students (from 8th grade to college juniors) participated in the 8 AM - 12 PM session alongside their parents. 30 private consultation slots were arranged, with 40 students receiving personalized guidance tailored to their goals and aspirations. This workshop engaged 143-150 participants in total, making it one of the largest events we have successfully organized together!\n\nSpecial Contribution: T. Narantuya, Senior Tax Manager at Amazon, led a Resume Clinic, mentoring students on resume writing and optimizing LinkedIn profiles.\n\nMany students shared their heartfelt gratitude, saying:\n'They have a really good counselor-she is changing the whole trajectory of their life. I see kids are all very happy!'\n\nThis event created a supportive, uplifting community where students, parents, and professionals came together to share knowledge, celebrate each other's success, and inspire the next generation. Seeing this culture of encouragement and generosity grow was truly rewarding.\n\nWe did it! Thank you to all the parents and students who made this possible!",
     },
     {
       id: 8,
@@ -101,7 +101,7 @@ const eventsByYear = {
       date: "March to June 2024",
       image: s202010,
       description:
-        "A Mongolian school operated at the 'Eternal Joy' church. The children were divided into four levels:\n• Basic Level with Foundation: Knows the alphabet and can read simple words.\n• Basic Level without Foundation: Learning the alphabet from scratch.\n• Intermediate Level – Writing Practice Needed: Can read but needs writing exercises.\n• Intermediate Level – Grammar Needed: Can read but requires grammar lessons.\n\nThe children enjoyed their lessons and engaged actively in a fun and innovative learning environment tailored to each student's level. By the end of the three-month program, all students had successfully learned to read.",
+        "A Mongolian school operated at the 'Eternal Joy' church. The children were divided into four levels: Basic Level with Foundation: Knows the alphabet and can read simple words. Basic Level without Foundation: Learning the alphabet from scratch. Intermediate Level – Writing Practice Needed: Can read but needs writing exercises. Intermediate Level – Grammar Needed: Can read but requires grammar lessons.\n\nThe children enjoyed their lessons and engaged actively in a fun and innovative learning environment tailored to each student's level. By the end of the three-month program, all students had successfully learned to read.",
     },
     {
       id: 10,
@@ -128,7 +128,7 @@ const eventsByYear = {
       image: s20233,
       date: "March 17, 2023",
       description:
-        "o A total of 40 participants visited Microsoft, where 9 Mongolian engineers and employees shared their experiences, career paths, and challenges.\no The session covered career selection, job interviews, internships, and balancing work with hobbies.\no The children were inspired by Mongolian professionals shaping history in Washington State.\no Special thanks to our Microsoft mentors!",
+        "A total of 40 participants visited Microsoft, where 9 Mongolian engineers and employees shared their experiences, career paths, and challenges. The session covered career selection, job interviews, internships, and balancing work with hobbies. The children were inspired by Mongolian professionals shaping history in Washington State. Special thanks to our Microsoft mentors!",
     },
     {
       id: 14,
@@ -136,7 +136,7 @@ const eventsByYear = {
       image: s20234,
       date: "May 6, 2023",
       description:
-        "o A group of 5 students and 5 parents visited Blue Origin, the aerospace company founded by Jeff Bezos.\no Mongolian engineer L. Zolboo hosted the tour, introducing the company's projects and career opportunities.",
+        "A group of 5 students and 5 parents visited Blue Origin, the aerospace company founded by Jeff Bezos. Mongolian engineer L. Zolboo hosted the tour, introducing the company's projects and career opportunities.",
     },
     {
       id: 15,
@@ -144,7 +144,7 @@ const eventsByYear = {
       date: "April 7-8, 2023",
       image: s20235,
       description:
-        "o Over 60 parents and students participated in three different training sessions led by college admissions expert Bayarmaa A.\no The Seattle team assisted with venue setup, registration, and logistics.",
+        "Over 60 parents and students participated in three different training sessions led by college admissions expert Bayarmaa A. The Seattle team assisted with venue setup, registration, and logistics.",
     },
     {
       id: 16,
@@ -152,7 +152,7 @@ const eventsByYear = {
       image: s20236,
       date: "May 30, 2023",
       description:
-        "o 12 participants visited the Amazon Spheres and joined the Asians in Amazon event, where they discussed career choices and professional growth.",
+        "12 participants visited the Amazon Spheres and joined the Asians in Amazon event, where they discussed career choices and professional growth.",
     },
     {
       id: 17,
@@ -161,7 +161,7 @@ const eventsByYear = {
       image: s20237,
       time: "8 AM - 5 PM",
       description:
-        "• 88 participants:\no 66 students, 12 parents, 2 college students, and 2 teachers.\n• Main Program Highlights:\no iCloud New Version at Amazon (Interactive show for Mongolian students)\no Future Engineers' Scholarship (Application process, benefits, and impact)\no Networking session with Mongolian Amazon employees, engineers, and specialists\nStudents were divided into high school and middle school groups, engaging in educational and interactive activities.\nThe event was highly effective, and engineers Enerel and Enkhgerel shared their experiences about their university journey, career preparation, and current work.",
+        "88 participants: 66 students, 12 parents, 2 college students, and 2 teachers. Main Program Highlights: iCloud New Version at Amazon (Interactive show for Mongolian students). Future Engineers' Scholarship (Application process, benefits, and impact). Networking session with Mongolian Amazon employees, engineers, and specialists. Students were divided into high school and middle school groups, engaging in educational and interactive activities.The event was highly effective, and engineers Enerel and Enkhgerel shared their experiences about their university journey, career preparation, and current work.",
     },
     {
       id: 18,
@@ -170,7 +170,7 @@ const eventsByYear = {
       image: s20238,
       location: "AWS Skills Center, 1915 Terry Ave, Seattle, WA 98101",
       description:
-        "The Amazon educational training took place in an engaging and interactive format. Participants visited different stations where they learned about new technologies, assembled processors, participated in competitions, and got a hands-on experience with Alexa and other smart home devices. The presenters made complex technological concepts easy to understand, and there were games and presentations from five speakers. All the speakers expressed their gratitude, and the atmosphere was very upbeat and positive.\n\nAmazon's team specifically expressed their appreciation to us. The event was well-organized and well-prepared, with lively and attentive children who understood the tasks and carried them out correctly. Their questions were endless, and the event, which included participants from grades 5-12, was filled with teamwork, warmth, and friendliness.\n\nThere are many plans for future collaborations, and we heard heartfelt words of encouragement and willingness to continue working together. The success of this event is a testament to the hard work and dedication of many parents and the active participation of the children. Special thanks to Enkhjin, who helped as a teacher at Pinecone, for her dedication. She was there at 8 AM to register and organize the children. Also, thanks to the two teachers from the coding school, the parents, and everyone who donated gifts for the event.",
+        "The Amazon educational training took place in an engaging and interactive format. Participants visited different stations where they learned about new technologies, assembled processors, participated in competitions, and got a hands-on experience with Alexa and other smart home devices. The presenters made complex technological concepts easy to understand, and there were games and presentations from five speakers. All the speakers expressed their gratitude, and the atmosphere was very upbeat and positive.Amazon's team specifically expressed their appreciation to us. The event was well-organized and well-prepared, with lively and attentive children who understood the tasks and carried them out correctly. Their questions were endless, and the event, which included participants from grades 5-12, was filled with teamwork, warmth, and friendliness. There are many plans for future collaborations, and we heard heartfelt words of encouragement and willingness to continue working together. The success of this event is a testament to the hard work and dedication of many parents and the active participation of the children. Special thanks to Enkhjin, who helped as a teacher at Pinecone, for her dedication. She was there at 8 AM to register and organize the children. Also, thanks to the two teachers from the coding school, the parents, and everyone who donated gifts for the event.",
     },
   ],
   2022: [
@@ -181,7 +181,7 @@ const eventsByYear = {
       image: s20231,
       location: "Renton Highlands Library",
       description:
-        "A discussion was held at Renton Highlands Library on the topic of adolescent social and emotional development, focusing on Asian children's mindset and the diversity and cultural policies in Washington State schools.\n\no Khulan shared valuable insights, and parents asked many questions about effective communication strategies with their children.\no Topics included sleepovers at friends' houses and helping children understand cultural differences during their teenage years.",
+        "A discussion was held at Renton Highlands Library on the topic of adolescent social and emotional development, focusing on Asian children's mindset and the diversity and cultural policies in Washington State schools. Khulan shared valuable insights, and parents asked many questions about effective communication strategies with their children. Topics included sleepovers at friends' houses and helping children understand cultural differences during their teenage years.",
     },
   ],
 }
