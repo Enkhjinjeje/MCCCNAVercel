@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import Image from "next/image"
 import { Calendar, Clock, MapPin, ChevronDown, ChevronUp } from "lucide-react"
@@ -14,14 +12,14 @@ import s20247 from "../../photos/events/2024/7.jpg"
 import s20248 from "../../photos/events/2024/8.jpg"
 import s20249 from "../../photos/events/2024/9.jpg"
 import s202010 from "../../photos/events/2024/10.jpg"
-import s20231 from "../../photos/events/2022-2023/1.jpg"
-import s20232 from "../../photos/events/2022-2023/2.jpg"
-import s20233 from "../../photos/events/2022-2023/3.jpg"
-import s20234 from "../../photos/events/2022-2023/4.jpg"
-import s20235 from "../../photos/events/2022-2023/5-1.jpg"
-import s20236 from "../../photos/events/2022-2023/6.jpg"
-import s20237 from "../../photos/events/2022-2023/7.jpg"
-import s20238 from "../../photos/events/2022-2023/8.jpg"
+import s20231 from "../../photos/events/20222023/1.jpg"
+import s20232 from "../../photos/events/20222023/2.jpg"
+import s20233 from "../../photos/events/20222023/3.jpg"
+import s20234 from "../../photos/events/20222023/4.jpg"
+import s20235 from "../../photos/events/20222023/5-1.jpg"
+import s20236 from "../../photos/events/20222023/6.jpg"
+import s20237 from "../../photos/events/20222023/7.jpg"
+import s20238 from "../../photos/events/20222023/8.jpg"
 
 
 const eventsByYear = {
