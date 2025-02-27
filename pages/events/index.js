@@ -150,7 +150,7 @@ const eventsByYear = {
       id: 16,
       title: "Amazon Spheres Tour & Career Panel",
       image: s20236,
-      date: "May 30, 2023",
+      date: "May 30, 2023", 
       description:
         "12 participants visited the Amazon Spheres and joined the Asians in Amazon event, where they discussed career choices and professional growth.",
     },

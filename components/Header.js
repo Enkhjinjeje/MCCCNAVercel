@@ -1,8 +1,62 @@
+"use client"
+
 import { useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ShoppingCart, Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { CSSTransition } from "react-transition-group"
+
+const NavItem = ({ href, text, children }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const timeoutRef = useRef(null)
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current)
+    setIsOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false)
+    }, 300) // Delay in milliseconds
+  }
+
+  return (
+    <div className="relative group" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="flex items-center">
+        <Link href={href} className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
+          {text}
+        </Link>
+        {children && (
+          <button className="ml-1 focus:outline-none" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
+            <ChevronDown className="h-4 w-4" />
+          </button>
+        )}
+      </div>
+      {children && (
+        <div
+          className={`absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
+          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+            {children}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+const DropdownItem = ({ href, text }) => (
+  <Link
+    href={href}
+    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+    role="menuitem"
+  >
+    {text}
+  </Link>
+)
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -30,21 +84,47 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/library"
-              className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider"
-            >
-              ABC LIBRARY
-            </Link>
-            <Link href="/events" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
-              EVENTS
-            </Link>
-            <Link href="/programs" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
-              PROGRAMS
-            </Link>
-            <Link href="/reviews" className="text-gray-900 hover:text-brand-blue font-bold text-sm tracking-wider">
-              REVIEWS
-            </Link>
+            <NavItem href="/library" text="ABC LIBRARY">
+              <DropdownItem href="/library/membership" text="Membership" />
+              <DropdownItem href="/library/book-review" text="Book Review" />
+              <DropdownItem href="/library/book-catalog" text="Book Catalog" />
+            </NavItem>
+            <NavItem href="/language-culture-school" text="LANGUAGE & CULTURE SCHOOL">
+              <DropdownItem href="/school/mongolian-alphabet" text="Mongolian Alphabet Class" />
+              <DropdownItem href="/school/reading-class" text="Reading Class" />
+              <DropdownItem href="/school/speaking-class" text="Speaking Class" />
+              <DropdownItem href="/school/creative-writing" text="Creative Writing Class" />
+              <DropdownItem href="/school/bilingual-exam-prep" text="Bilingual Exam Preparation Class" />
+              <DropdownItem href="/school/dairy-meal-cooking" text="Dairy Meal/Food Cooking Class" />
+              <DropdownItem href="/school/art-class" text="Art Class" />
+              <DropdownItem href="/school/felt-craft" text="Felt Craft Class" />
+            </NavItem>
+            <NavItem href="/programs" text="PROGRAMS">
+              <DropdownItem href="/mit-1" text="MIT 1" />
+              <DropdownItem href="/mit-2" text="MIT 2" />
+              <DropdownItem href="/summer-camp" text="Summer Camp" />
+              <DropdownItem href="/adult-programs" text="Adult Programs" />
+              <DropdownItem href="/youth-programs" text="Youth Programs" />
+              <DropdownItem href="/adult-programs" text="Adult Programs" />
+              <DropdownItem href="/youth-programs" text="Youth Programs" />
+              <DropdownItem href="/adult-programs" text="Adult Programs" />
+              <DropdownItem href="/youth-programs" text="Youth Programs" />
+              <DropdownItem href="/adult-programs" text="Adult Programs" />
+              <DropdownItem href="/youth-programs" text="Youth Programs" />
+              <DropdownItem href="/adult-programs" text="Adult Programs" />
+            </NavItem>
+            <NavItem href="/events" text="EVENTS">
+              <DropdownItem href="/upcoming-events" text="Upcoming Events" />
+              <DropdownItem href="/past-events" text="Past Events" />
+            </NavItem>
+            <NavItem href="/get-involved" text="GET INVOLVED">
+              <DropdownItem href="/volunteer" text="Volunteer" />
+              <DropdownItem href="/donate" text="Donate" />
+            </NavItem>
+            <NavItem href="/mongolian-shop" text="MONGOLIAN SHOP">
+              <DropdownItem href="/traditional-items" text="Traditional Items" />
+              <DropdownItem href="/modern-items" text="Modern Items" />
+            </NavItem>
           </nav>
 
           {/* Right section */}
@@ -78,10 +158,10 @@ export default function Header() {
               ABC LIBRARY
             </Link>
             <Link
-              href="/events"
+              href="/language-culture-school"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
             >
-              EVENTS
+              LANGUAGE & CULTURE SCHOOL
             </Link>
             <Link
               href="/programs"
@@ -90,10 +170,22 @@ export default function Header() {
               PROGRAMS
             </Link>
             <Link
-              href="/reviews"
+              href="/events"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
             >
-              REVIEWS
+              EVENTS
+            </Link>
+            <Link
+              href="/get-involved"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              GET INVOLVED
+            </Link>
+            <Link
+              href="/mongolian-shop"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-brand-blue hover:bg-gray-50"
+            >
+              MONGOLIAN SHOP
             </Link>
           </div>
         </div>
