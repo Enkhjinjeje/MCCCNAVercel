@@ -84,12 +84,12 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <NavItem href="/library" text="ABC LIBRARY">
+            <NavItem href="/library/membership" text="ABC LIBRARY">
               <DropdownItem href="/library/membership" text="Membership" />
               <DropdownItem href="/library/book-review" text="Book Review" />
               <DropdownItem href="/library/book-catalog" text="Book Catalog" />
             </NavItem>
-            <NavItem href="/language-culture-school" text="LANGUAGE & CULTURE SCHOOL">
+            <NavItem href="/school/mongolian-alphabet" text="LANGUAGE & CULTURE SCHOOL">
               <DropdownItem href="/school/mongolian-alphabet" text="Mongolian Alphabet Class" />
               <DropdownItem href="/school/reading-class" text="Reading Class" />
               <DropdownItem href="/school/speaking-class" text="Speaking Class" />
@@ -99,31 +99,36 @@ export default function Header() {
               <DropdownItem href="/school/art-class" text="Art Class" />
               <DropdownItem href="/school/felt-craft" text="Felt Craft Class" />
             </NavItem>
-            <NavItem href="/programs" text="PROGRAMS">
-              <DropdownItem href="/mit-1" text="MIT 1" />
-              <DropdownItem href="/mit-2" text="MIT 2" />
-              <DropdownItem href="/summer-camp" text="Summer Camp" />
-              <DropdownItem href="/adult-programs" text="Adult Programs" />
-              <DropdownItem href="/youth-programs" text="Youth Programs" />
-              <DropdownItem href="/adult-programs" text="Adult Programs" />
-              <DropdownItem href="/youth-programs" text="Youth Programs" />
-              <DropdownItem href="/adult-programs" text="Adult Programs" />
-              <DropdownItem href="/youth-programs" text="Youth Programs" />
-              <DropdownItem href="/adult-programs" text="Adult Programs" />
-              <DropdownItem href="/youth-programs" text="Youth Programs" />
-              <DropdownItem href="/adult-programs" text="Adult Programs" />
+            <NavItem href="/programs/mit-1" text="PROGRAMS">
+              <DropdownItem href="/programs/mit-1" text="MIT 1" />
+              <DropdownItem href="/programs/mit-2" text="MIT 2" />
+              <DropdownItem href="/programs/summer-camp" text="Summer Camp" />
+              <DropdownItem href="/programs/adult-volunteering" text="Adult Volunteering" />
+              <DropdownItem href="/programs/tEDx-project" text="TED x Project" />
+              <DropdownItem href="/programs/arts-project" text="Arts Project" />
+              <DropdownItem href="/programs/college-apps" text="College Apps" />
+              <DropdownItem href="/programs/amazon-book" text="Amazon Book Reading" />
+              <DropdownItem href="/programs/field-trips" text="Field Trips" />
             </NavItem>
-            <NavItem href="/events" text="EVENTS">
-              <DropdownItem href="/upcoming-events" text="Upcoming Events" />
-              <DropdownItem href="/past-events" text="Past Events" />
+            <NavItem href="/events/upcoming-events" text="EVENTS">
+              <DropdownItem href="/events/upcoming-events" text="Upcoming Events" />
+              <DropdownItem href="/events/2025" text="2025" />
+              <DropdownItem href="/events/2024" text="2024" />
+              <DropdownItem href="/events/2023" text="2023" />
+              <DropdownItem href="/events/2022" text="2022" />
             </NavItem>
-            <NavItem href="/get-involved" text="GET INVOLVED">
-              <DropdownItem href="/volunteer" text="Volunteer" />
-              <DropdownItem href="/donate" text="Donate" />
+            <NavItem href="/get-involved/volunteer" text="GET INVOLVED">
+              <DropdownItem href="/get-involved/volunteer" text="Volunteer" />
+              <DropdownItem href="/get-involved/donate" text="Donate" />
+              <DropdownItem href="/get-involved/intership" text="Interships" />
+              <DropdownItem href="/get-involved/subscription" text="Subscription" />
+              <DropdownItem href="/get-involved/monthly-newletter" text="Monthly Newsleeter" />
             </NavItem>
-            <NavItem href="/mongolian-shop" text="MONGOLIAN SHOP">
-              <DropdownItem href="/traditional-items" text="Traditional Items" />
-              <DropdownItem href="/modern-items" text="Modern Items" />
+            <NavItem href="/shop/books" text="MONGOLIAN SHOP">
+              <DropdownItem href="/shop/books" text="Books" />
+              <DropdownItem href="/shop/souvenirs" text="Souvenirs" />
+              <DropdownItem href="/shop/reviews" text="Reviews" />
+              <DropdownItem href="/shop/gifts" text="Gifts" />
             </NavItem>
           </nav>
 
