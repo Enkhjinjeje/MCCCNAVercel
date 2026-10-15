@@ -1,0 +1,61 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #e8edf2;
+  box-shadow: 0 2px 12px #182d4405;
+  backdrop-filter: blur(12px);
+  color: #263748;
+}
+.bar { max-width: 1280px; margin: auto; padding: 0 32px; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.logo { display: inline-flex; flex-shrink: 0; border-radius: 8px; }
+.logo img { width: auto; height: 68px; }
+.desktop { display: flex; align-items: center; gap: 30px; }
+.desktopItem { position: relative; }
+.itemHeading { position: relative; display: flex; align-items: center; gap: 2px; padding: 12px 0; }
+.itemHeading::after { content: ''; position: absolute; bottom: 3px; left: 0; right: 0; height: 2px; background: #0088ff; border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
+.itemHeading:hover::after,.itemHeading:focus-within::after,.active::after { transform: scaleX(1); }
+.mainLink { font-size: 13px; font-weight: 700; letter-spacing: .075em; text-transform: uppercase; white-space: nowrap; padding: 4px 0; transition: color 160ms ease; }
+.mainLink:hover,.active .mainLink { color: #0879cb; }
+.chevronButton { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; min-height: 32px; color: #6d7c8b; border-radius: 6px; transition: color 160ms ease, background 160ms ease; }
+.chevronButton:hover { background: #f0f6fb; color: #0879cb; }
+.chevronButton svg { transition: transform 200ms ease; }
+.chevronButton[aria-expanded=true] svg { transform: rotate(180deg); }
+.dropdown { position: absolute; top: 100%; left: -18px; width: 320px; padding-top: 10px; visibility: hidden; opacity: 0; transform: translateY(-7px); pointer-events: none; transition: opacity 180ms ease, transform 180ms ease, visibility 180ms; }
+.desktopItem:nth-last-child(2) .dropdown { left: auto; right: -18px; }
+.desktopItem:last-child .dropdown { left: auto; right: -18px; width: 260px; }
+.dropdownOpen { visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; }
+.dropdownSurface { padding: 8px; background: white; border: 1px solid #e5ecf3; border-radius: 12px; box-shadow: 0 14px 40px #173b601a, 0 2px 6px #173b6008; max-height: min(65vh,520px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.subLink { display: block; padding: 11px 12px; border-radius: 7px; font-size: 14px; line-height: 1.5; transition: color 150ms ease, background 150ms ease; overflow-wrap: anywhere; }
+.subLink:hover,.subLink:focus-visible { color: #0879cb; background: #f0f7fd; }
+.header a:focus-visible,.header button:focus-visible { outline: 2px solid #0879cb; outline-offset: 3px; border-radius: 6px; }
+.mobileToggle { display: none; position: relative; width: 44px; height: 44px; border-radius: 9px; background: #f3f7fa; color: #263748; }
+.menuIcon,.closeIcon { position: absolute; top: 10px; left: 10px; transition: opacity 180ms ease, transform 220ms ease; }
+.closeIcon { opacity: 0; transform: rotate(-60deg) scale(.8); }
+.mobileToggleOpen .menuIcon { opacity: 0; transform: rotate(60deg) scale(.8); }
+.mobileToggleOpen .closeIcon { opacity: 1; transform: rotate(0) scale(1); }
+.mobilePanel { display: none; }
+@media (max-width: 899px) {
+  .bar { min-height: 78px; padding: 0 20px; }
+  .logo img { height: 58px; }
+  .desktop { display: none; }
+  .mobileToggle { display: block; }
+  .mobilePanel { display: grid; grid-template-rows: 0fr; position: absolute; top: 100%; left: 0; right: 0; background: white; box-shadow: 0 16px 24px #173b6012; visibility: hidden; transition: grid-template-rows 240ms ease, visibility 240ms; }
+  .mobilePanelOpen { grid-template-rows: 1fr; visibility: visible; }
+  .mobileClip { min-height: 0; overflow: hidden; }
+  .mobileNav { padding: 8px 20px 18px; max-height: calc(100dvh - 90px); overflow-y: auto; overscroll-behavior: contain; }
+  .mobileGroup + .mobileGroup { border-top: 1px solid #edf1f5; }
+  .mobileHeading { display: flex; align-items: center; justify-content: space-between; min-height: 56px; gap: 12px; }
+  .mobileHeading > a { flex: 1; padding: 16px 4px; font-size: 14px; font-weight: 700; }
+  .mobileHeading .chevronButton { min-width: 44px; min-height: 44px; }
+  .accordion { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 220ms ease, opacity 180ms ease; }
+  .accordionOpen { grid-template-rows: 1fr; opacity: 1; }
+  .accordionClip { min-height: 0; overflow: hidden; }
+  .mobileLinks { padding: 0 0 12px 4px; }
+  .mobileLinks a { display: block; padding: 11px 12px; margin: 2px 0; font-size: 14px; line-height: 1.5; border-radius: 7px; color: #5a6d80; background: #f7f9fc; transition: background 150ms ease, color 150ms ease; }
+  .mobileLinks a:hover { background: #edf5fd; color: #0879cb; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header *, .header *::after { transition: none !important; }
+}

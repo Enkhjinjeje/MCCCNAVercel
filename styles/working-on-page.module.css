@@ -1,0 +1,35 @@
+.page { position:relative; min-height:calc(100svh - 88px); display:flex; align-items:center; justify-content:center; padding:38px 24px 64px; overflow:hidden; background:radial-gradient(ellipse at 50% 24%,#edf5fb 0,transparent 53%),#fafbf9; text-align:center; }
+.content { position:relative; width:100%; max-width:640px; }
+.art { max-width:300px; margin:0 auto 10px; }
+.illustration { display:block; width:100%; height:auto; overflow:visible; }
+.eyebrow { color:#47738d; font-size:10px; font-weight:700; letter-spacing:.19em; margin:8px 0 18px; }
+.content h1 { color:#20394c; font-size:clamp(32px,4.4vw,48px); font-weight:750; line-height:1.14; letter-spacing:-1.6px; margin:0 0 22px; }
+.description { color:#627480; font-size:15px; line-height:1.85; margin:0 auto; }
+.actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin:28px 0 24px; }
+.actions a { display:inline-flex; align-items:center; justify-content:center; gap:18px; padding:13px 20px; border:1px solid #dce4e8; border-radius:8px; font-size:13px; font-weight:650; transition:background 160ms ease,transform 160ms ease,box-shadow 160ms ease; }
+.actions a:hover { transform:translateY(-2px); box-shadow:0 5px 14px #234c6a12; }
+.actions a:focus-visible { outline:2px solid #0879cb; outline-offset:4px; }
+.actions .primary { background:#2476a7; color:#fff; border-color:#2476a7; }
+.primary:hover { background:#1e648e; }
+.secondary { color:#466273; background:#fff; }
+.secondary:hover { background:#f1f6f8; }
+.footnote { font-size:11px; color:#8b989e; letter-spacing:.025em; }
+.horse { animation:gallop 760ms ease-in-out infinite; transform-origin:180px 180px; }
+.rider { animation:rider 760ms ease-in-out infinite; transform-origin:176px 132px; }
+.leg { transform-origin:0 0; animation:stride 760ms cubic-bezier(.45,0,.55,1) infinite; }
+.nearFront { animation-delay:-380ms; }
+.farFront { animation-delay:-190ms; }
+.farBack { animation-delay:-570ms; }
+.tail { transform-origin:0 0; animation:tail 760ms ease-in-out infinite alternate; }
+.shadow { transform-origin:179px 232px; animation:shadow 760ms ease-in-out infinite; }
+.dust { animation:dust 1520ms linear infinite; }
+.clouds { animation:clouds 9s ease-in-out infinite alternate; }
+@keyframes gallop { 0%,100% {transform:translateY(0) rotate(-1deg);} 45% {transform:translateY(-5px) rotate(1deg);} 75% {transform:translateY(1px) rotate(0);} }
+@keyframes rider { 0%,100% {transform:translateY(0) rotate(0);} 45% {transform:translateY(2px) rotate(-3deg);} 75% {transform:translateY(-1px) rotate(1deg);} }
+@keyframes stride { 0%,100% {transform:rotate(-24deg);} 50% {transform:rotate(27deg);} }
+@keyframes tail { from {transform:rotate(-9deg);} to {transform:rotate(9deg);} }
+@keyframes shadow { 0%,100% {transform:scaleX(1);opacity:.11;} 45% {transform:scaleX(.87);opacity:.07;} }
+@keyframes dust { 0% {transform:translateX(8px);opacity:0;} 25% {opacity:.65;} 100% {transform:translate(-28px,-7px);opacity:0;} }
+@keyframes clouds { from {transform:translateX(0);} to {transform:translateX(-10px);} }
+@media(max-width:600px) { .page{min-height:calc(100svh - 78px);padding:28px 20px 52px;} .art{max-width:250px;margin-bottom:8px;} .content h1{letter-spacing:-1px;} .description{font-size:14px;} .eyebrow{font-size:9px;} .desktopBreak{display:none;} .actions{gap:10px;margin-top:24px;} .actions a{padding:12px 16px;gap:12px;} }
+@media(prefers-reduced-motion:reduce) { .page *, .page *::after{animation:none!important;transition:none!important;} }
