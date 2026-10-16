@@ -16,8 +16,13 @@ export default function EventPage({ event, year, events }) {
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Event Not Found</h1>
-          <p className="text-xl text-gray-600 mb-8">Sorry, the event you're looking for doesn't exist.</p>
-          <Link href="/events" className="bg-brand-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <p className="text-xl text-gray-600 mb-8">
+            Sorry, the event you're looking for doesn't exist.
+          </p>
+          <Link
+            href="/events"
+            className="bg-brand-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
             Back to Events
           </Link>
         </div>
@@ -29,7 +34,13 @@ export default function EventPage({ event, year, events }) {
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[400px]">
-        <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" priority />
+        <Image
+          src={event.image || "/placeholder.svg"}
+          alt={event.title}
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
             <h1 className="text-5xl font-bold mb-6">{event.title}</h1>
@@ -47,24 +58,29 @@ export default function EventPage({ event, year, events }) {
                   <Calendar className="h-6 w-6 mr-2 text-brand-blue" />
                   <span>{event.date}</span>
                 </div>
-                {event.time && <div className="flex items-center text-gray-600">
-                  <Clock className="h-6 w-6 mr-2 text-brand-blue" />
-                  <span>{event.time}</span>
-                </div>}
-                {event.location && <div className="flex items-center text-gray-600">
-                  <MapPin className="h-6 w-6 mr-2 text-brand-blue" />
-                  <span>{event.location}</span>
-                </div>}
+                {event.time && (
+                  <div className="flex items-center text-gray-600">
+                    <Clock className="h-6 w-6 mr-2 text-brand-blue" />
+                    <span>{event.time}</span>
+                  </div>
+                )}
+                {event.location && (
+                  <div className="flex items-center text-gray-600">
+                    <MapPin className="h-6 w-6 mr-2 text-brand-blue" />
+                    <span>{event.location}</span>
+                  </div>
+                )}
               </div>
 
               <p className="text-gray-600 mb-4 whitespace-pre-wrap">{event.description}</p>
               <p className="text-gray-600 mb-8 whitespace-pre-wrap">{event.details}</p>
 
-              {event.registration_open && <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Register for this Event</h2>
-                <EmailSignup eventId={event.id} />
-              </section>}
-
+              {event.registration_open && (
+                <section className="mb-8">
+                  <h2 className="text-2xl font-bold mb-4">Register for this Event</h2>
+                  <EmailSignup eventId={event.id} />
+                </section>
+              )}
 
               <div className="flex justify-between items-center">
                 <Link href="/events" className="text-brand-blue hover:text-blue-700 font-semibold">
@@ -80,11 +96,16 @@ export default function EventPage({ event, year, events }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const year=archiveYear(params.slug)
-  if(year) return { props: { year, events: await loadPublished('events',{year}) } }
-  const { data: event, error } = await getPublicClient().from('events').select('*')
-    .eq('slug', params.slug).eq('published', true).is('deleted_at', null).maybeSingle()
-  if (error) throw new Error('Unable to load event.')
+  const year = archiveYear(params.slug)
+  if (year) return { props: { year, events: await loadPublished("events", { year }) } }
+  const { data: event, error } = await getPublicClient()
+    .from("events")
+    .select("*")
+    .eq("slug", params.slug)
+    .eq("published", true)
+    .is("deleted_at", null)
+    .maybeSingle()
+  if (error) throw new Error("Unable to load event.")
   if (!event) return { notFound: true }
   return { props: { event } }
 }

@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import backgrImg from '../photos/backgrounds/bg2.jpg'
+import Image from "next/image"
+import Link from "next/link"
+import backgrImg from "../photos/backgrounds/bg2.jpg"
 import moongo from "../photos/stock/mongolian.jpeg"
 import arts from "../photos/stock/mognolianArts.jpg"
 import culture from "../photos/stock/culture.jpeg"
@@ -19,9 +19,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
             <h1 className="text-5xl font-bold mb-6">Mongolian Cultural Center in North America</h1>
-            <p className="text-xl mb-8">Preserving and sharing the rich cultural heritage of Mongolia with communities across North America</p>
-            <Link 
-              href="/events" 
+            <p className="text-xl mb-8">
+              Preserving and sharing the rich cultural heritage of Mongolia with communities across
+              North America
+            </p>
+            <Link
+              href="/events"
               className="bg-brand-red hover:bg-red-600 text-white font-bold py-3 px-8 rounded-md text-lg inline-block"
             >
               Discover Our Center
@@ -36,17 +39,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
-                <Image 
-                  src={moongo}
-                  alt="Learn Mongolian" 
-                  fill
-                  className="object-cover"
-                />
+                <Image src={moongo} alt="Learn Mongolian" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-brand-blue">Learn Mongolian</h3>
-                <p className="text-gray-600 mb-4">Join our language classes and discover the beauty of the Mongolian language</p>
-                <Link 
+                <p className="text-gray-600 mb-4">
+                  Join our language classes and discover the beauty of the Mongolian language
+                </p>
+                <Link
                   href="/language-school"
                   className="text-brand-red hover:text-red-600 font-semibold"
                 >
@@ -56,40 +56,28 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
-                <Image 
-                  src={culture}
-                  alt="Cultural Events" 
-                  fill
-                  className="object-cover"
-                />
+                <Image src={culture} alt="Cultural Events" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-brand-blue">Cultural Events</h3>
-                <p className="text-gray-600 mb-4">Experience traditional festivals, music, dance, and authentic Mongolian cuisine</p>
-                <Link 
-                  href="/events"
-                  className="text-brand-red hover:text-red-600 font-semibold"
-                >
+                <p className="text-gray-600 mb-4">
+                  Experience traditional festivals, music, dance, and authentic Mongolian cuisine
+                </p>
+                <Link href="/events" className="text-brand-red hover:text-red-600 font-semibold">
                   View Events →
                 </Link>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
-                <Image 
-                  src={arts} 
-                  alt="Art & Crafts" 
-                  fill
-                  className="object-cover"
-                />
+                <Image src={arts} alt="Art & Crafts" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-brand-blue">Programs and Initiatives</h3>
-                <p className="text-gray-600 mb-4">Learn about mongolian future and prospects from their projects</p>
-                <Link 
-                  href="/programs"
-                  className="text-brand-red hover:text-red-600 font-semibold"
-                >
+                <p className="text-gray-600 mb-4">
+                  Learn about mongolian future and prospects from their projects
+                </p>
+                <Link href="/programs" className="text-brand-red hover:text-red-600 font-semibold">
                   Discover More →
                 </Link>
               </div>
@@ -103,8 +91,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Latest News</h3>
-              <Link 
-                href="/news" 
+              <Link
+                href="/news"
                 className="bg-white text-brand-blue hover:bg-gray-100 font-bold py-2 px-6 rounded-md inline-block"
               >
                 Read Our Blog
@@ -112,8 +100,8 @@ export default function Home() {
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Join Our Community</h3>
-              <Link 
-                href="/membership" 
+              <Link
+                href="/membership"
                 className="bg-white text-brand-blue hover:bg-gray-100 font-bold py-2 px-6 rounded-md inline-block"
               >
                 Become a Member
@@ -121,8 +109,8 @@ export default function Home() {
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Support Our Mission</h3>
-              <Link 
-                href="/donate" 
+              <Link
+                href="/donate"
                 className="bg-brand-red hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md inline-block"
               >
                 Donate Today
@@ -134,4 +122,3 @@ export default function Home() {
     </div>
   )
 }
-

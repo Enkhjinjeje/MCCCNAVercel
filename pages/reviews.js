@@ -14,28 +14,43 @@ export default function Reviews({ reviews }) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setNewReview((prev) => ({ ...prev, [name]: name === "rating" ? Number.parseInt(value) : value }))
+    setNewReview((prev) => ({
+      ...prev,
+      [name]: name === "rating" ? Number.parseInt(value) : value,
+    }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setBusy(true); setMessage(""); setError("")
+    setBusy(true)
+    setMessage("")
+    setError("")
     try {
-      const { error } = await getBrowserClient().rpc('submit_review', {
-        reviewer_name: newReview.name, review_rating: newReview.rating, review_comment: newReview.comment,
+      const { error } = await getBrowserClient().rpc("submit_review", {
+        reviewer_name: newReview.name,
+        review_rating: newReview.rating,
+        review_comment: newReview.comment,
       })
       if (error) throw error
       setNewReview({ name: "", rating: 5, comment: "" })
-      setMessage("Thank you! Your review has been saved and will appear after administrator approval.")
-    } catch { setError("Unable to submit your review. Please try again later.") }
-    finally { setBusy(false) }
+      setMessage(
+        "Thank you! Your review has been saved and will appear after administrator approval."
+      )
+    } catch {
+      setError("Unable to submit your review. Please try again later.")
+    } finally {
+      setBusy(false)
+    }
   }
 
   return (
     <>
       <Head>
         <title>Reviews - Mongolian Cultural Center</title>
-        <meta name="description" content="Read and submit reviews for the Mongolian Cultural Center" />
+        <meta
+          name="description"
+          content="Read and submit reviews for the Mongolian Cultural Center"
+        />
       </Head>
 
       <div className="bg-white min-h-screen">
@@ -45,9 +60,19 @@ export default function Reviews({ reviews }) {
           {/* Review submission form */}
           <div className="bg-gray-100 p-6 rounded-lg mb-8">
             <h2 className="text-2xl font-semibold mb-4">Submit Your Review</h2>
-            <p className="mb-4">Your name and review will be public after administrator approval.</p>
-            {message && <p role="status" className="mb-4">{message}</p>}
-            {error && <p role="alert" className="mb-4">{error}</p>}
+            <p className="mb-4">
+              Your name and review will be public after administrator approval.
+            </p>
+            {message && (
+              <p role="status" className="mb-4">
+                {message}
+              </p>
+            )}
+            {error && (
+              <p role="alert" className="mb-4">
+                {error}
+              </p>
+            )}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -134,10 +159,13 @@ export default function Reviews({ reviews }) {
   )
 }
 
-
 export async function getServerSideProps() {
-  const { data, error } = await getPublicClient().from('reviews').select('id,name,rating,comment')
-    .eq('approved',true).is('deleted_at',null).order('created_at')
-  if(error) throw new Error('Unable to load reviews.')
+  const { data, error } = await getPublicClient()
+    .from("reviews")
+    .select("id,name,rating,comment")
+    .eq("approved", true)
+    .is("deleted_at", null)
+    .order("created_at")
+  if (error) throw new Error("Unable to load reviews.")
   return { props: { reviews: data } }
 }
